@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TaskList = ({ taskData, deleteTask }) => {
+const TaskList = ({ taskData, deleteTask, editTask }) => {
   return (
     <>
       {taskData.map((task, index) => (
@@ -11,7 +11,7 @@ const TaskList = ({ taskData, deleteTask }) => {
 
           <div className="icons">
             <i 
-                // onClick={() => editTask(index)} 
+                onClick={() => editTask(index)} 
                 className="fa-solid fa-edit editIcon" title="Edit Task">
             </i>
             <i id="deleteIcon" onClick={() => deleteTask(index)} className="fa-solid fa-trash deleteIcon"></i>
